@@ -14,7 +14,7 @@ class SPPCSPC(nn.Module):
         self.cv2 = Conv(c1, c_, 1, 1)
         self.cv3 = Conv(c_, c_, 3, 1)
         self.cv4 = Conv(c_, c_, 1, 1)
-        # self.m = nn.ModuleList([CBAM(c_,c_,k=x,s=1,p=x//2) for x in k]) #change here
+        self.m = nn.ModuleList([CBAM(c_,c_,k=x,s=1,p=x//2) for x in k]) #change here
         self.m = nn.ModuleList([nn.MaxPool2d(kernel_size=x, stride=1, padding=x // 2) for x in k])
         self.cv5 = Conv(4 * c_, c_, 1, 1)
         self.cv6 = Conv(c_, c_, 3, 1)
