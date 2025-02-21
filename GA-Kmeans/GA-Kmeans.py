@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from utils import avg_iou, evaluate, decode, load_data_VOC2007, kmeans
 
-path_VOC2012 = 'path\to\VOCdevkit\VOC2007\Annotations'
+path_VOC2012 = 'path\to\Annotations'
 
 def initialize(individual_num=60):
     """
