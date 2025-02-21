@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 
 
-def load_data_VOC2007(path):
+def load_data(path):
     data = []
     # -------------------------------------------------------------#
     #   对于每一个xml都寻找box
